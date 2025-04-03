@@ -1,0 +1,407 @@
+/* 导入字体 */
+@import url(https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css);
+@import url(https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/sans.css);
+
+/* 设置全局字体变量 */
+:root {
+    --r-main-font: "Computer Modern Sans", sans-serif, "LXGW WenKai Screen";
+    --r-heading-font: "Computer Modern Sans", sans-serif, "LXGW WenKai Screen";
+    --r-code-font: "Computer Modern Sans", sans-serif, "LXGW WenKai Screen";
+}
+
+/* 全局样式 */
+.reveal {
+    font-family: var(--r-main-font);
+    color: #333;
+    font-size: 24px;
+}
+
+/* 标题样式 */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-weight: 700;
+}
+
+/* 文本元素内边距 */
+.reveal p, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+    padding: 0 25px 0 25px;
+}
+
+/* 幻灯片基本样式 */
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal .slides section {
+    padding: 20px;
+}
+
+/* 列表样式 */
+.reveal ul {
+    margin: 0 0 0 1.5em
+  }
+  .reveal ol {
+    margin: 0 0 0 2em;
+  }
+  .reveal li {
+    margin-top: 10px;
+  }
+  .reveal li + li {
+    margin-top: 10px;
+  }
+  .reveal ul {
+    display: block;
+    margin-right: 15px;
+  }
+  
+  /* 一级标题样式 */
+  .reveal h1 strong {
+    font-weight: 600 !important;
+  }
+  
+  .reveal h1 {
+    display: inline-block !important;
+    width: 80%;
+    margin: 0 10 0 10;
+    font-size: 50px;
+    font-weight: 200;
+    /* 移除背景色 */
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* 居中标题样式 */
+  .reveal .middle h1 {
+    text-align: center;
+  }
+  
+  /* 二级标题样式 */
+  .reveal h2 {
+    font-size: 36px;
+    font-weight: 500;
+    /* 移除背景色 */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  /* 其他级别标题样式 */
+  .reveal h3,
+  .reveal h4,
+  .reveal h5,
+  .reveal h6 {
+    text-align: left;
+    margin: 0 0 20px 0;
+    color: #222;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  .reveal h3 { font-size: 1.15em; }
+  .reveal h4 { font-size: 1.05em; }
+  
+  /* 居中对齐样式 */
+  .reveal .center {
+    text-align: center;
+  }
+  
+  /* 垂直居中样式 */
+  .reveal .middle {
+    height: 660px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* 居中元素样式 */
+  section .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 水平分隔线样式 */
+  .reveal hr {
+    border: 10px solid white;
+  }
+  .reveal .middle hr {
+    border: 0;
+    height: 2px;
+    background: radial-gradient(ellipse at center,rgba(1, 14, 54, 0.324) 0,hsla(0, 0%, 100%, 0) 75%);
+    margin-bottom: 40px;
+  }
+
+/* 数学公式样式 */
+.reveal .math {
+    font-size: 0.9em;
+    padding-right: 0.5em;
+}
+
+/* 独立公式居中显示 */
+.reveal section .math.display {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+}
+
+/* 引用样式 */
+.reveal blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1em;
+    font-style: italic;
+    margin: 1em 0;
+    background-color: #f9f9f9;
+}
+
+/* 表格样式 */
+.reveal table {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* 三线表样式 */
+.three-line {
+    text-align: center;
+}
+.three-line > table {
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    text-align: center;
+    page-break-inside: avoid;
+    display: inline-table !important;
+}
+.three-line > table > tbody > tr > td {
+    border: none;
+    padding: 7px 15px;
+}
+.three-line > table > tbody > tr {
+    border: none;
+    padding: 7px;
+}
+.three-line > table > thead {
+    border-bottom: 0.75pt solid;
+    font-size: 0.9em;
+}
+.three-line > table th {
+    border: none;
+}
+
+/* 普通表格样式 */
+section > table {
+    border: 1.5pt solid;
+    text-align: center;
+    page-break-inside: avoid;
+}
+section > table > tbody > tr > td {
+    border: 0.75pt solid;
+    padding: 7px;
+}
+section > table > tbody > tr {
+    border: 0.75pt solid;
+    padding: 7px;
+}
+section > table > thead {
+    border: 0.75pt solid;
+    font-size: 0.9em;
+}
+section > table th {
+    border: 0.75px solid;
+}
+
+/* 多列布局样式 */
+.reveal .mul-cols {
+    display: flex;
+}
+.reveal .mul-cols .col {
+    width: 100%
+}
+
+/* PDF打印样式 */
+html.print-pdf .reveal pre code {
+    font-family: var(--r-code-font) !important;
+}
+
+/**
+  * 汉字排版样式 - 修改自 https://github.com/sivan/heti
+  */
+.reveal heti-spacing {
+    display: inline;
+}
+
+.reveal heti-spacing + sup,
+.reveal heti-spacing + sub {
+    margin-inline-start: 0;
+}
+
+.reveal .heti-spacing {
+    font-size: 0.5em;
+    vertical-align: top;
+}
+
+.reveal .heti-spacing-start {
+    margin-inline-end: 0.25em;
+}
+
+.reveal .heti-spacing-end {
+    margin-inline-start: 0.25em;
+}
+
+.reveal heti-adjacent {
+    display: inline;
+}
+
+.reveal .heti-adjacent-half {
+    margin-inline-end: -0.5em;
+}
+
+.reveal .heti-adjacent-quarter {
+    margin-inline-end: -0.25em;
+}
+
+/* 代码块样式 */
+.reveal pre {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 0.8em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    overflow: auto;
+    max-height: 400px;
+    margin: 0.5em 0;
+}
+
+/* 行内代码样式 */
+.reveal code {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    background-color: #f0f0f0;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #d14;
+}
+
+/* 代码高亮样式 */
+.reveal .hljs-keyword,
+.reveal .hljs-selector-tag,
+.reveal .hljs-built_in,
+.reveal .hljs-name {
+    color: #0086b3;
+    font-weight: bold;
+}
+
+.reveal .hljs-string,
+.reveal .hljs-title,
+.reveal .hljs-section,
+.reveal .hljs-attribute,
+.reveal .hljs-literal,
+.reveal .hljs-template-tag,
+.reveal .hljs-template-variable,
+.reveal .hljs-type {
+    color: #d14;
+}
+
+.reveal .hljs-comment,
+.reveal .hljs-quote {
+    color: #998;
+    font-style: italic;
+}
+
+.reveal .hljs-number,
+.reveal .hljs-regexp,
+.reveal .hljs-variable,
+.reveal .hljs-symbol,
+.reveal .hljs-bullet {
+    color: #099;
+}
+
+.reveal .hljs-function,
+.reveal .hljs-params {
+    color: #333;
+}
+
+.reveal .hljs-class,
+.reveal .hljs-title.class_ {
+    color: #458;
+    font-weight: bold;
+}
+
+/* Python特定语法高亮 */
+.reveal .language-python .hljs-decorator,
+.reveal .language-python .hljs-meta {
+    color: #8959a8;
+}
+
+.reveal .language-python .hljs-keyword {
+    color: #0086b3;
+}
+
+/* JavaScript特定语法高亮 */
+.reveal .language-javascript .hljs-keyword {
+    color: #0086b3;
+}
+
+.reveal .language-javascript .hljs-literal {
+    color: #0086b3;
+}
+
+/* 强调样式 */
+.reveal strong {
+    color: #0066cc;
+}
+
+/* 斜体样式 */
+.reveal em {
+    font-style: italic;
+}
+
+/* 删除线样式 */
+.reveal del {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* 链接样式 */
+.reveal a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.reveal a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+/* 表格样式 */
+.reveal table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+.reveal table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.reveal table td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+}
+
+/* 图片样式 */
+.reveal img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 页面过渡效果 */
+.reveal .slides > section,
+.reveal .slides > section > section {
+    transition: all 0.3s ease;
+}
